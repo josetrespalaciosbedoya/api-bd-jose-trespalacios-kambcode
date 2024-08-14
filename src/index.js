@@ -1,19 +1,9 @@
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 3000;
-const sequelize = require('./config/database.js');
-require('./models/student.js');
-require('./models/course.js');
-require('./models/enrollment.js');
+const app = require('./app'); // Importación del módulo app
 
-app.use(express.json());
+// Configuración del puerto
+const PORT = process.env.PORT || 3000;
 
-sequelize.sync()
-  .then(() => console.log('Tablas creadas correctamente.'))
-  .catch(err => console.error('No se pudo sincronizar la base de datos:', err));
-
-app.listen(port, () => {
-  console.log(`Servidor ejecutándose en http://localhost:${port}`);
+// Iniciando el servidor en el puerto configurado
+app.listen(PORT, () => {
+  console.log(`Servidor escuchando en el puerto ${PORT}`);
 });
-
-module.exports = app;
