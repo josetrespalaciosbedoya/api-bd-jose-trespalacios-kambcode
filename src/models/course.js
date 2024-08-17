@@ -15,6 +15,9 @@ const Course = sequelize.define('Course', {
     type: DataTypes.TEXT,
     allowNull: true,
   },
+}, {
+  timestamps: true, // Esto crea automáticamente las columnas createdAt y updatedAt
+  tableName: 'courses', // Asegúrate de que el nombre de la tabla coincida con el de la BD
 });
 
 module.exports = Course;
