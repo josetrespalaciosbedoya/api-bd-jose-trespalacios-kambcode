@@ -50,12 +50,13 @@ SELECT * FROM enrollments;
 
 -- 7. Inserciones de data base
 -- 7.1. Inserciones de tabla estudiantes
-IINSERT INTO "Students" (first_name, last_name, email, "createdAt", "updatedAt") VALUES
+INSERT INTO "students" (first_name, last_name, email, "createdAt", "updatedAt") VALUES
 ('John', 'Doe', 'johndoe@example.com', NOW(), NOW()),
 ('Jane', 'Smith', 'janesmith@example.com', NOW(), NOW()),
 ('Michael', 'Johnson', 'michaelj@example.com', NOW(), NOW()),
 ('Emily', 'Davis', 'emilydavis@example.com', NOW(), NOW()),
 ('Chris', 'Brown', 'chrisbrown@example.com', NOW(), NOW());
+
 -- 7.2. Inserciones de tabla cursos
 INSERT INTO "courses" (title, description, "createdAt", "updatedAt") VALUES
 ('Introduction to Programming', 'Learn the basics of programming using Python.', NOW(), NOW()),
